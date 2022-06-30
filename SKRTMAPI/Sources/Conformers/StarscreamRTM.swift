@@ -81,8 +81,6 @@ public class StarscreamRTM: RTMWebSocket, WebSocketDelegate {
             break // unhandled
         case .cancelled:
             break // unhandled
-        @unknown default:
-            break // unhandled
         }
     }
 }
