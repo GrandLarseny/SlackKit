@@ -74,6 +74,9 @@ open class Client {
             channelArchived(event, archived: false)
         case .channelHistoryChanged, .imHistoryChanged, .groupHistoryChanged:
             channelHistoryChanged(event)
+        case .desktopNotification:
+            // The desktop_notification event is currently unsupported and experimental.
+            break
         case .dndUpdated:
             doNotDisturbUpdated(event)
         case .dndUpatedUser:
