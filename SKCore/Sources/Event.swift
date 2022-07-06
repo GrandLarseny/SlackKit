@@ -36,6 +36,7 @@ public enum EventType: String {
     case channelHistoryChanged = "channel_history_changed"
     case dndUpdated = "dnd_updated"
     case dndUpatedUser = "dnd_updated_user"
+    case desktopNotification = "desktop_notification"
     case imCreated = "im_created"
     case imOpen = "im_open"
     case imClose = "im_close"
