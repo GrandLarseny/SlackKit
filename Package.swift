@@ -18,7 +18,6 @@ let package = Package(
     dependencies: [
         .package(name: "Swifter", url: "https://github.com/httpswift/swifter.git", .upToNextMinor(from: "1.5.0")),
         .package(name: "WebSocketKit", url: "https://github.com/vapor/websocket-kit", .upToNextMinor(from: "2.0.0")),
-        .package(name: "Starscream", url: "https://github.com/daltoniam/Starscream", .upToNextMinor(from: "4.0.4"))
     ],
     targets: [
         .target(name: "SlackKit",
@@ -33,8 +32,7 @@ let package = Package(
                 dependencies: [
                     "SKCore",
                     "SKWebAPI",
-                    .product(name: "Starscream", package: "Starscream", condition: .when(platforms: [.macOS, .iOS, .tvOS])),
-                    .product(name: "WebSocketKit", package: "WebSocketKit", condition: .when(platforms: [.macOS, .linux])),
+                    .product(name: "WebSocketKit", package: "WebSocketKit"),
                 ],
                 path: "SKRTMAPI/Sources"),
         .target(name: "SKServer",

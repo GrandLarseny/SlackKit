@@ -21,7 +21,6 @@
 // OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 // THE SOFTWARE.
 
-#if os(Linux) || os(macOS) && !COCOAPODS
 import Foundation
 import NIO
 import WebSocketKit
@@ -69,4 +68,3 @@ public class VaporEngineRTM: RTMWebSocket {
         websocket.send(message)
     }
 }
-#endif
