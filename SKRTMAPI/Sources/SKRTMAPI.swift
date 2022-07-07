@@ -61,14 +61,12 @@ public final class SKRTMAPI: RTMDelegate {
     var ping: Double?
     var pong: Double?
 
-    public init(withAPIToken token: String, options: RTMOptions = RTMOptions(), rtm: RTMWebSocket? = nil) {
+    public init(withAPIToken token: String,
+                options: RTMOptions = RTMOptions(),
+                rtm: RTMWebSocket = VaporEngineRTM()) {
         self.token = token
         self.options = options
-        if let rtm = rtm {
-            self.rtm = rtm
-        } else {
-            self.rtm = VaporEngineRTM()
-        }
+        self.rtm = rtm
         self.rtm.delegate = self
     }
 
