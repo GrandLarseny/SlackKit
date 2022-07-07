@@ -63,7 +63,7 @@ public final class SKRTMAPI: RTMDelegate {
 
     public init(withAPIToken token: String,
                 options: RTMOptions = RTMOptions(),
-                rtm: RTMWebSocket = VaporEngineRTM()) {
+                rtm: RTMWebSocket) {
         self.token = token
         self.options = options
         self.rtm = rtm

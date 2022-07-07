@@ -62,7 +62,7 @@ public final class SlackKit: RTMAdapter {
         _ token: String,
         client: Client? = Client(),
         options: RTMOptions = RTMOptions(),
-        rtm: RTMWebSocket? = nil
+        rtm: RTMWebSocket = VaporEngineRTM()
     ) {
         let rtm = SKRTMAPI(withAPIToken: token, options: options, rtm: rtm)
         rtm.adapter = self
