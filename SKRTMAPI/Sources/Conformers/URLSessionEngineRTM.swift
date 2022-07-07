@@ -43,7 +43,7 @@ public class URLSessionEngineRTM: NSObject, RTMWebSocket {
                 if case .string(let text) = message {
                     delegate?.receivedMessage(text)
                 }
-            }catch {
+            } catch {
                 debugPrint("Error receiving message. \(error)")
             }
 
